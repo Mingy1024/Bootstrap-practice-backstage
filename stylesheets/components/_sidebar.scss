@@ -5,6 +5,8 @@ $sidebar-width: 280px;
   width: $sidebar-width;
   margin-left: -$sidebar-width;
   transition: margin-left 0.25s;
+  position: fixed;
+  top: 0;
   .sidebar-link {
     color: $dark;
     display: block;
@@ -39,6 +41,10 @@ $sidebar-width: 280px;
   .sidebar {
     margin-left: 0;
   }
+  .main {
+    margin-left: $sidebar-width;
+    transition: margin-left .25s;
+  }
 }
 
 // 桌面板
@@ -49,6 +55,8 @@ $sidebar-width: 280px;
   }
   .main {
     width: calc(100vw - #{$sidebar-width});
+    margin-left: $sidebar-width;
+    transition: margin-left .25s;
   }
   // 展開 sidebar
   .sidebar-toggled {
@@ -57,6 +65,7 @@ $sidebar-width: 280px;
     }
     .main {
       width: 100%;
+      margin-left: 0;
     }
   }
 }
