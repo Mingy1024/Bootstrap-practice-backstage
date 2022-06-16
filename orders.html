@@ -176,7 +176,12 @@
                               <a class="dropdown-item" href="#">修改狀態</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#"
+                              <a
+                                class="dropdown-item text-danger"
+                                href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-bs-orderId="EX12345678"
                                 >刪除訂單</a
                               >
                             </li>
@@ -188,12 +193,12 @@
                       <td class="ps-4">
                         <input type="checkbox" class="form-check-input" />
                       </td>
-                      <td scope="row">EX12345678</td>
+                      <td scope="row">EX12345666</td>
                       <td>abc@gmail.com</td>
-                      <td>小王</td>
-                      <td>漢堡</td>
+                      <td>小美</td>
+                      <td>披薩</td>
                       <td class="text-danger">未付款</td>
-                      <td class="text-end">$90</td>
+                      <td class="text-end">$230</td>
                       <td class="text-end pe-4">
                         <div class="btn-group">
                           <a href="#" class="btn btn-sm btn-outline-dark"
@@ -216,7 +221,12 @@
                               <a class="dropdown-item" href="#">修改狀態</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#"
+                              <a
+                                class="dropdown-item text-danger"
+                                href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-bs-orderId="EX12345666"
                                 >刪除訂單</a
                               >
                             </li>
@@ -228,12 +238,12 @@
                       <td class="ps-4">
                         <input type="checkbox" class="form-check-input" />
                       </td>
-                      <td scope="row">EX12345678</td>
+                      <td scope="row">EX12345777</td>
                       <td>abc@gmail.com</td>
-                      <td>小王</td>
-                      <td>漢堡</td>
+                      <td>小劉</td>
+                      <td>牛排</td>
                       <td class="text-danger">未付款</td>
-                      <td class="text-end">$90</td>
+                      <td class="text-end">$240</td>
                       <td class="text-end pe-4">
                         <div class="btn-group">
                           <a href="#" class="btn btn-sm btn-outline-dark"
@@ -256,7 +266,12 @@
                               <a class="dropdown-item" href="#">修改狀態</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#"
+                              <a
+                                class="dropdown-item text-danger"
+                                href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-bs-orderId="EX12345777"
                                 >刪除訂單</a
                               >
                             </li>
@@ -283,6 +298,53 @@
                 </ul>
               </nav>
             </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="deleteModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">刪除訂單</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>確認刪除「<span id="deleteText"></span>」的訂單嗎?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                      確認刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              const modalByDelete = document.querySelector("#deleteModal");
+              modalByDelete.addEventListener("show.bs.modal", function (event) {
+                const button = event.relatedTarget;
+                const orderId = button.getAttribute("data-bs-orderId");
+                const modalText = document.querySelector("#deleteText");
+                modalText.textContent = orderId;
+              });
+            </script>
           </div>
         </div>
       </main>
