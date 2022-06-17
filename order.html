@@ -127,7 +127,9 @@
                           <td>漢堡</td>
                           <td class="text-center">$90</td>
                           <td class="text-center">1</td>
-                          <td class="text-center text-danger fw-bold">未出貨</td>
+                          <td class="text-center text-danger fw-bold">
+                            未出貨
+                          </td>
                           <td class="pe-2 text-center">
                             <a href="#" class="btn btn-sm btn-outline-dark"
                               >編輯 <i class="bi bi-pen"></i
@@ -142,7 +144,9 @@
                           <td>披薩</td>
                           <td class="text-center">$230</td>
                           <td class="text-center">2</td>
-                          <td class="text-center text-danger fw-bold">未出貨</td>
+                          <td class="text-center text-danger fw-bold">
+                            未出貨
+                          </td>
                           <td class="pe-2 text-center">
                             <a href="#" class="btn btn-sm btn-outline-dark"
                               >編輯 <i class="bi bi-pen"></i
@@ -157,7 +161,9 @@
                           <td>牛排</td>
                           <td class="text-center">$240</td>
                           <td class="text-center">2</td>
-                          <td class="text-center text-success fw-bold">已出貨</td>
+                          <td class="text-center text-success fw-bold">
+                            已出貨
+                          </td>
                           <td class="pe-2 text-center">
                             <a href="#" class="btn btn-sm btn-outline-dark"
                               >編輯 <i class="bi bi-pen"></i
@@ -199,12 +205,12 @@
 
               <!-- 發票管理 -->
               <div class="card mb-3">
-                <div class="card-header">
-                  發票管理
-                </div>
+                <div class="card-header">發票管理</div>
                 <div class="card-body">
                   <div class="row mb-3">
-                    <label for="invoiceType" class="col-sm-2 col-form-label">發票類型</label>
+                    <label for="invoiceType" class="col-sm-2 col-form-label"
+                      >發票類型</label
+                    >
                     <div class="col-sm-10">
                       <select name="" id="invoiceType" class="form-select">
                         <option value="">個人發票</option>
@@ -215,28 +221,70 @@
                   </div>
 
                   <div class="row mb-3">
-                    <label for="taxNumber" class="col-sm-2 col-form-label">統一編號</label>
+                    <label for="taxNumber" class="col-sm-2 col-form-label"
+                      >統一編號</label
+                    >
                     <div class="col-sm-10">
-                      <input type="text" id="taxNumber" class="form-control" value="12345678">
+                      <input
+                        type="text"
+                        id="taxNumber"
+                        class="form-control"
+                        value="12345678"
+                      />
                     </div>
                   </div>
 
                   <div class="row mb-3">
-                    <label for="companyName" class="col-sm-2 col-form-label">公司名稱</label>
+                    <label for="companyName" class="col-sm-2 col-form-label"
+                      >公司名稱</label
+                    >
                     <div class="col-sm-10">
-                      <input type="text" id="companyName" class="form-control" value="六角西餐廳">
+                      <input
+                        type="text"
+                        id="companyName"
+                        class="form-control"
+                        value="六角西餐廳"
+                      />
                     </div>
+                  </div>
+                  <div class="text-end">
+                    <button type="button" class="btn btn-outline-primary">
+                      更新資訊
+                    </button>
                   </div>
                 </div>
               </div>
 
               <!-- 危險操作 -->
               <div class="card mb-3">
-                <div class="card-header">
-                  危險操作
-                </div>
+                <div class="card-header">危險操作</div>
                 <div class="card-body">
+                  <div class="row align-items-center mb-3">
+                    <div class="col-md-2 col-4">
+                      <button class="btn btn-outline-secondary w-100">
+                        退款
+                      </button>
+                    </div>
+                    <div class="col">退還用戶款項</div>
+                  </div>
 
+                  <div class="row align-items-center mb-3">
+                    <div class="col-md-2 col-4">
+                      <button class="btn btn-outline-secondary w-100">
+                        折讓
+                      </button>
+                    </div>
+                    <div class="col">針對已開立的訂單退回部分款項</div>
+                  </div>
+
+                  <div class="row align-items-center">
+                    <div class="col-md-2 col-4">
+                      <button class="btn btn-outline-danger w-100">
+                        刪除訂單
+                      </button>
+                    </div>
+                    <div class="col">將訂單刪除，並移除相關訂單資訊</div>
+                  </div>
                 </div>
               </div>
             </div>
